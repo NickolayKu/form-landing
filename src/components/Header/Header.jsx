@@ -4,6 +4,7 @@ import Logo from "../../assets/logo.svg?react";
 import MenuBars from "../../assets/icons/menu-bars.svg?react";
 import StartProjectButton from "../StartProjectButton/StartProjectButton";
 import { useEffect, useState } from "react";
+import MobileMenu from "../../modals/MobileMenu/MobileMenu";
 
 export default function Header() {
   const location = useLocation();
@@ -48,6 +49,8 @@ export default function Header() {
             </div>
           </div>
         </div>
+
+        <MobileMenu handleCloseMenu={() => setIsMobileMenuOpen(false)} isOpened={isMobileMenuOpen} />
       </header>
   )
 
