@@ -1,0 +1,140 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transition: all ease 0.2s;
+
+  @media (max-width: 1600px) {
+    gap: 48px;
+  }
+
+  @media (max-width: 430px) {
+    gap: 25px;
+  }
+
+  .formRow {
+    display: flex;
+    flex-direction: row;
+    gap: 99px;
+
+    @media (max-width: 1600px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 430px) {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    input {
+      width: 100%;
+      border: 0px;
+      border-bottom: 1px solid var(--gray);
+      color: var(--black);
+      font-family: 'ScaniaSansCYHeadline';
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 37.5px;
+      padding: 10px 0;
+      outline: none;
+      box-shadow: none;
+
+      @media (max-width: 1600px) {
+        font-size: 25px;
+        line-height: 31.25px;
+      }
+
+      @media (max-width: 430px) {
+        font-size: 18px;
+        line-height: 22.5px;
+      }
+
+      &.fieldError {
+        border-bottom: 1px solid red;
+      }
+
+      &::placeholder {
+        color: var(--gray);
+      }
+      &::-ms-input-placeholder {
+        color: var(--gray);
+      }
+
+      &:hover, &:active, &:focus {
+        border-bottom: 1px solid var(--black);
+      }
+    }
+  }
+}
+
+.sendButton {
+  font-family: 'ScaniaSansCYHeadline';
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37.5px;
+  color: var(--black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  margin-top: 60px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease 0.2s;
+
+  @media (max-width: 1600px) {
+    margin-top: 58px;
+    font-size: 25px;
+    line-height: 31.25px;
+  }
+  
+  @media (max-width: 430px) {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 22.5px;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    color: var(--blue);
+  }
+
+  .arrowIcon {
+    margin-top: -2px;
+    width: 19px;
+    height: 19px;
+
+    @media (max-width: 1600px) {
+      width: 17px;
+      height: 17px;
+    }
+
+    @media (max-width: 430px) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.policyBlock {
+  margin-top: 15px;
+
+  span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--black);
+    opacity: 0.6;
+    transition: all ease 0.2s;
+    
+    a {
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+}

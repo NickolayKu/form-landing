@@ -1,0 +1,141 @@
+.homeTitle {
+  width: 100%;
+  padding-top: 247px;
+  padding-bottom: 174px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+
+  @media (max-width: 430px) {
+    padding-top: 145px;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 56.25px;
+    text-align: left;
+    color: var(--black);
+    width: 100%;
+
+    @media (max-width: 1600px) {
+      font-size: 39px;
+      line-height: 48.75px;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+
+    .formLogoImage {
+      background-image: url("/images/form-logo.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      width: 265px;
+      height: 119px;
+      margin-top: -95px;
+      margin-left: 240px;
+      opacity: 0.85px;
+
+      @media (max-width: 1600px) {
+        width: 229px;
+        height: 103px;
+        margin-top: -78px;
+        margin-left: 207px;
+      }
+
+      @media (max-width: 430px) {
+        width: 81px;
+        height: 36px;
+        margin-top: -28px;
+        margin-left: 108px;
+      }
+    }
+
+    .formThingImage {
+      background-image: url("/images/thing.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      margin-top: -148px;
+      margin-left: -74px;
+      display: inline-block;
+      width: 80px;
+      height: 76px;
+
+      @media (max-width: 1600px) {
+        width: 70px;
+        height: 66px;
+        margin-top: -118px;
+        margin-left: -66px;
+      }
+
+      @media (max-width: 430px) {
+        width: 30px;
+        height: 26px;
+        margin-top: -89px;
+        margin-left: -28px;
+      }
+    }
+
+    .formArrowImage {
+      background-image: url("/images/arrow.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      margin-top: 54px;
+      margin-left: -900px;
+      display: inline-block;
+      width: 145.82px;
+      height: 57.25px;
+      opacity: 0.85;
+
+      @media (max-width: 1600px) {
+        width: 135px;
+        height: 53px;
+        margin-top: 30px;
+        margin-left: -800px;
+      }
+
+      @media (max-width: 430px) {
+        width: 55.79px;
+        height: 21.9px;
+        margin-top: 19px;
+        margin-left: -352px;
+        transform: rotate(-6deg);
+      }
+    }
+
+    span {
+      display: block;
+      text-align: right;
+      color: var(--blue);
+
+      .line {
+        width: 731px;
+        height: 2px;
+        background-color: var(--blue);
+        opacity: 0.3;
+        float: right;
+
+        @media (max-width: 1600px) {
+          width: 632px;
+        }
+
+        @media (max-width: 430px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.contacts {
+  margin-top: 247px;
+
+  h1 {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 48.75px;
+    color: var(--black);
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    text-align: center;
+    color: var(--black);
+    transition: all ease 0.2s;
+
+    span {
+      color: var(--blue);
+      cursor: pointer;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: calc(100% - 20px);
+    max-width: 1440px;
+    padding: 46px 20px;
+    margin: 0 auto;
+
+    @media (max-width: 1600px) {
+      max-width: 1202px;
+    }
+
+    .linksBlock {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+      gap: 54px;
+      font-family: 'ScaniaSansCY';
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      transition: all ease 0.2s;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: var(--blue);
+        }
+      }
+    }
+  }
+}

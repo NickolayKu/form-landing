@@ -1,0 +1,197 @@
+.h2 {
+  font-family: 'ScaniaSansCYHeadline';
+  font-size: 41px;
+  font-weight: 400;
+  line-height: 51.25px;
+  color: var(--black);
+  margin-bottom: 92px;
+
+  @media (max-width: 1600px) {
+    font-size: 39px;
+    line-height: 48.75px;
+    margin-bottom: 81px;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+.slider {
+  transition: all ease 0.2s;
+  margin-bottom: 160px;
+
+  @media (max-width: 430px) {
+    margin-bottom: 80px;
+  }
+  
+  span {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+    color: var(--blue);
+    opacity: 1;
+    transition: all ease 0.2s;
+    display: block;
+    max-width: 1264px;
+
+    @media (max-width: 1600px) {
+      font-size: 25px;
+      line-height: 35px;
+      max-width: 1053px;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 95%;
+    }
+
+    &.transparent {
+      opacity: 0;
+    }
+  }
+
+  .bottomBlock {
+    margin-top: 233px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1600px) {
+      margin-top: 246px;
+    }
+
+    @media (max-width: 430px) {
+      margin-top: 100px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 33px;
+      opacity: 1;
+      transition: all ease 0.2s;
+
+      @media (max-width: 1600px) {
+        gap: 28px;
+      }
+
+      @media (max-width: 430px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+      }
+
+      &.transparent {
+        opacity: 0;
+      }
+
+      .avatar {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+
+        @media (max-width: 1600px) {
+          width: 70px;
+          height: 70px;
+        }
+
+        @media (max-width: 430px) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      .cardContent {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-family: 'ScaniaSansCYHeadline';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.2px;
+        color: var(--blue);
+
+        @media (max-width: 1600px) {
+          gap: 4px;
+          font-size: 14px;
+          line-height: 19.6px;
+        }
+
+        @media (max-width: 430px) {
+          gap: 0px;
+          font-size: 14px;
+          line-height: 19.6px;
+        }
+
+        .job {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: row;
+      gap: 52px;
+
+      @media (max-width: 430px) {
+        gap: 32px;
+        margin-top: 117px;
+      }
+      
+      .arrowButton {
+        transition: all ease 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &.disabled {
+          opacity: 0.5;
+          cursor: unset;
+        }
+
+        .arrowLeftIcon {
+          width: 12px;
+          height: 25px;
+          transform: rotate(180deg);
+
+          @media (max-width: 1600px) {
+            width: 7px;
+            height: 21px;
+          }
+
+          @media (max-width: 430px) {
+            width: 7px;
+            height: 15px;
+          }
+        }
+        .arrowRightIcon {
+          width: 12px;
+          height: 25px;
+
+          @media (max-width: 1600px) {
+            width: 7px;
+            height: 21px;
+          }
+
+          @media (max-width: 430px) {
+            width: 7px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.portfolioTitle {
+  margin-top: 247px;
+  margin-bottom: 120px;
+
+  h1 {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 56.25px;
+    color: var(--black);
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 28px;
+    margin-top: 20px;
+
+    span {
+      font-family: 'ScaniaSansCY';
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 31.25px;
+      color: var(--blue);
+    }
+  }
+
+  h2 {
+    font-family: 'ScaniaSansCY';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--black);
+    margin-top: 40px;
+  }
+}

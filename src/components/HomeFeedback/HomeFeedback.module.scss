@@ -1,0 +1,28 @@
+.h2 {
+  font-family: 'ScaniaSansCYHeadline';
+  font-size: 41px;
+  font-weight: 400;
+  line-height: 51.25px;
+  color: var(--black);
+  margin-bottom: 92px;
+
+  @media (max-width: 1600px) {
+    font-size: 39px;
+    margin-bottom: 96px;
+    line-height: 48.75px;
+  }
+
+  @media (max-width: 430px) {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 25px;
+  }
+}
+
+.content {
+  margin-bottom: 140px;
+
+  @media (max-width: 430px) {
+    margin-bottom: 80px;
+  }
+}
