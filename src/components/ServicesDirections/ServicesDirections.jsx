@@ -1,5 +1,6 @@
 import cls from "./ServicesDirections.module.scss";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function ServicesDirections() {
 
@@ -32,7 +33,9 @@ export default function ServicesDirections() {
 
   return (
     <div className="container">
-      <h2 className={cls.h2}>Направления услуг</h2>
+      <ScrollAnimation animateIn="fadeInUp" duration={0.6} animateOnce={true}>
+        <h2 className={cls.h2}>Направления услуг</h2>
+      </ScrollAnimation>
 
       <div className={cls.servicesDirections}>
         {servicesCards.map((item, index) => {

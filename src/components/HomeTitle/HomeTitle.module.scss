@@ -27,6 +27,10 @@
     color: var(--black);
     width: 100%;
 
+    a {
+      text-decoration: none;
+    }
+
     @media (max-width: 1600px) {
       font-size: 39px;
       line-height: 48.75px;
@@ -40,6 +44,16 @@
     @media (max-width: 740px) {
       font-size: 18px;
       line-height: 25.2px;
+    }
+
+    @media (max-width: 455px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 15px;
+      line-height: 20px;
     }
 
     .formLogoImage {
@@ -144,6 +158,14 @@
         margin-left: -352px;
         transform: rotate(-6deg);
       }
+
+      @media (max-width: 455px) {
+        margin-left: -325px;
+      }
+
+      @media (max-width: 390px) {
+        margin-left: -308px;
+      }
     }
 
     span {
@@ -157,6 +179,7 @@
         background-color: var(--blue);
         opacity: 0.3;
         float: right;
+        transition: all ease 0.2s;
 
         @media (max-width: 1600px) {
           width: 632px;
@@ -169,6 +192,12 @@
         @media (max-width: 740px) {
           display: none;
         }
+      }
+    }
+
+    a:hover {
+      .line {
+        opacity: 1;
       }
     }
   }

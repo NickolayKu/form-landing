@@ -1,7 +1,7 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  transition: all ease 0.2s;
+  transition: all ease 0.3s;
   cursor: pointer;
   flex: 1;
   margin-bottom: 160px;
@@ -131,12 +131,6 @@
       color: var(--blue);
     }
 
-    .image {
-      background-size: 170%;
-
-      @media (max-width: 820px) {
-        background-size: cover;
-      }
-    }
+    transform: scale(0.95);
   }
 }

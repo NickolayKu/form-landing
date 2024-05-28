@@ -1,6 +1,7 @@
 import { useState } from "react";
 import cls from "./ThinksSlider.module.scss";
 import ArrowRight from "../../assets/icons/arrow-right.svg?react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function ThinksSlider() {
 
@@ -38,7 +39,9 @@ export default function ThinksSlider() {
 
   return (
     <div className="container">
-      <h2 className={cls.h2}>Мысли вслух</h2>
+      <ScrollAnimation animateIn="fadeInUp" duration={0.6} animateOnce={true}>
+        <h2 className={cls.h2}>Мысли вслух</h2>
+      </ScrollAnimation>
 
       <div className={cls.slider}>
         <span className={isTransparent ? cls.transparent : ''}>

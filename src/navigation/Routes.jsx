@@ -4,8 +4,10 @@ import BaseLayout from "../layouts/Base";
 // Pages
 import Home from "../pages/Home/Home";
 import Contacts from "../pages/Contacts/Contacts";
-import Portfolio from "../pages/Portfolio/Portfolio";
-// import PortfolioColizeum from "../pages/PortfolioColizeum/PortfolioColizeum";
+import FeedbackForm from "../pages/FeedbackForm/FeedbackForm";
+import PortfolioTopgun from "../pages/PortfolioTopgun/PortfolioTopgun";
+import PortfolioColizeum from "../pages/PortfolioColizeum/PortfolioColizeum";
+import SuccessForm from "../pages/SuccessForm/SuccessForm";
 // import PortfolioMagma from "../pages/PortfolioMagma/PortfolioMagma";
 // import Error404 from "../pages/Error404/Error404";
 
@@ -24,15 +26,23 @@ const Routes = [
         element: <Contacts />,
       },
       {
-        path: "/portfolio/:projectName",
-        element: <Portfolio />,
+        path: "/form",
+        element: <FeedbackForm />,
+      },
+      {
+        path: "/form/success",
+        element: <SuccessForm />,
+      },
+      {
+        path: "/projects/topgun",
+        element: <PortfolioTopgun />,
+      },
+      {
+        path: "/projects/colizeum",
+        element: <PortfolioColizeum />,
       },
       // {
-      //   path: "/colizeum",
-      //   element: <PortfolioColizeum />,
-      // },
-      // {
-      //   path: "/magma",
+      //   path: "/projects/magma",
       //   element: <PortfolioMagma />,
       // },
     ],

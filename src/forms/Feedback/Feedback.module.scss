@@ -59,6 +59,7 @@
       }
 
       &.fieldError {
+        color: red;
         border-bottom: 1px solid red;
       }
 
@@ -72,6 +73,18 @@
       &:hover, &:active, &:focus {
         border-bottom: 1px solid var(--black);
       }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
     }
   }
 }
@@ -101,11 +114,6 @@
     margin-top: 40px;
     font-size: 18px;
     line-height: 22.5px;
-  }
-
-  &.disabled {
-    pointer-events: none;
-    opacity: 0.6;
   }
 
   &:hover {
@@ -141,6 +149,8 @@
     transition: all ease 0.2s;
     
     a {
+      text-decoration: underline;
+
       &:hover {
         color: var(--blue);
       }

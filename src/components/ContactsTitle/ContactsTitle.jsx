@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
-import FullscreenFeedback from "../../modals/FullscreenFeedback/FullscreenFeedback";
 import cls from "./ContactsTitle.module.scss";
-import { useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function ContContactsTitlects() {
 
-  const [isModalShowing, setIsModalShowing] = useState(false);
-
   return (
     <div className={cls.contacts}>
-      <h1>От вас желание, на нас реализация</h1>
+      <ScrollAnimation animateIn="fadeInUp" duration={0.6} animateOnce={true}>
+        <h1>От вас желание, на нас реализация</h1>
+      </ScrollAnimation>
 
       <div className={cls.content}>
-        <span onClick={() => setIsModalShowing(true)}>начать проект</span>
-        <Link to="mailto:info@form.moscow">info@form.moscow</Link>
+        <a className={cls.formLink} href="/form">Начать проект</a>
+        <Link to="mailto:capsule.form@gmail.com">capsule.form@gmail.com</Link>
         <Link to="tel:89670049415">+ 7 967 004 94 15</Link>
       </div>
 
@@ -28,13 +27,8 @@ export default function ContContactsTitlects() {
           <Link target="_blank" rel="noopener noreferrer" to="/">
             Telegram
           </Link>
-          <Link target="_blank" rel="noopener noreferrer" to="/">
-            Вконтакте
-          </Link>
         </div>
       </div>
-
-      <FullscreenFeedback handleCloseModal={() => setIsModalShowing(false)} isShowing={isModalShowing} />
     </div>
   );
 }

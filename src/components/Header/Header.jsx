@@ -31,18 +31,22 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
   return (
       <header className={[cls.header, isHidden && cls.hidden].join(' ')}>
         <div className="container">
           <div className={cls.content}>
-            <Link to='/'>
+            <a href='/'>
               <Logo className={cls.logoSVG} />
-            </Link>
+            </a>
             <StartProjectButton />
             {location.pathname === '/contacts' ? (
-              <Link className={cls.headerLink} to='/'>Главная</Link>
+              <a className={cls.headerLink} href='/'>Главная</a>
             ) : (
-              <Link className={cls.headerLink} to='/contacts'>Контакты</Link>
+              <a className={cls.headerLink} href='/contacts'>Контакты</a>
             )}
             <div className={cls.mobileMenuButton}>
               <MenuBars onClick={() => setIsMobileMenuOpen(true)} className={cls.menuBarsIcon}/>

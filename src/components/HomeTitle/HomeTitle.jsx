@@ -1,3 +1,4 @@
+import ScrollAnimation from "react-animate-on-scroll";
 import cls from "./HomeTitle.module.scss";
 
 export default function HomeTitle() {
@@ -6,11 +7,15 @@ export default function HomeTitle() {
       <div className={cls.homeTitle}>
         <h1>
           <div className={cls.formLogoImage}></div>
-          Креативная студия, создающая<br/>
-          взаимодействие человека
+          <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
+            Креативная студия, создающая<br/>
+            взаимодействие человека
+          </ScrollAnimation>
           <span>
-            с Вашим предложением
-            <div className={cls.line}></div>
+            <a href="/form">
+              с Вашим предложением
+              <div className={cls.line}></div>
+            </a>
             <div className={cls.formThingImage}></div>
             <div className={cls.formArrowImage}></div>
           </span>

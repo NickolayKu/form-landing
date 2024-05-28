@@ -1,22 +1,16 @@
-//import { Link } from "react-router-dom";
-import { useState } from "react";
-import FullscreenFeedback from "../../modals/FullscreenFeedback/FullscreenFeedback";
 import cls from "./StartProjectButton.module.scss";
+import { Link } from "react-router-dom";
 
 export default function StartProjectButton() {
 
-  const [isModalShowing, setIsModalShowing] = useState(false);
-
   return (
-    <>
-      <div className={cls.startProjectButton} onClick={() => setIsModalShowing(true)}>
+    <Link to='/form'>
+      <div className={cls.startProjectButton}>
         <span>
           Начать проект
         </span>
         <div className={cls.line}></div>
       </div>
-
-      <FullscreenFeedback handleCloseModal={() => setIsModalShowing(false)} isShowing={isModalShowing} />
-    </>
+    </Link>
   )
 }

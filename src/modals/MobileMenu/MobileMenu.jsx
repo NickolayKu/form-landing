@@ -2,14 +2,10 @@
 import cls from "./MobileMenu.module.scss";
 import CloseCross from "../../assets/icons/cross.svg?react";
 import Logo from "../../assets/logo.svg?react";
-import FullscreenFeedback from "../../modals/FullscreenFeedback/FullscreenFeedback";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function MobileMenu(props) {
   const { handleCloseMenu, isOpened } = props;
-
-  const [isModalShowing, setIsModalShowing] = useState(false);
 
   return (
     <div className={[cls.mobileMenu, isOpened && cls.opened].join(' ')}>
@@ -24,17 +20,15 @@ export default function MobileMenu(props) {
             </div>
           </div>
           <div className={cls.modalBody}>
-            <span onClick={() => setIsModalShowing(true)}>Начать проект</span>
+            <Link to='/form'>Начать проект</Link>
             <Link to='/contacts'>Контакты</Link>
           </div>
           <div className={cls.modalFooter}>
-            <Link to='mailto:info@form.moscow'>info@form.moscow</Link>
+            <Link to='mailto:capsule.form@gmail.com'>capsule.form@gmail.com</Link>
             <Link to='tel:89670049415'>+ 7 967 004 94 15</Link>
           </div>
         </div>
       </section>
-
-      <FullscreenFeedback handleCloseModal={() => setIsModalShowing(false)} isShowing={isModalShowing} />
     </div>
   )
 }

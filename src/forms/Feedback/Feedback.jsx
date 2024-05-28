@@ -2,13 +2,14 @@
 import { useState } from "react";
 import cls from "./Feedback.module.scss";
 import ArrowTopRight from "../../assets/icons/top-right-arrow.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 
-export default function Feedback(props) {
-  const { handleFormSended } = props;
+export default function Feedback() {
+  const navigate = useNavigate();
 
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isEmailError, setIsEmailError] = useState(false);
+  const [isPhoneError, setIsPhoneError] = useState(false);
+  const [isNameError, setIsNameError] = useState(false);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -31,32 +32,34 @@ export default function Feedback(props) {
 
   const handleChangeData = (key, event) => {
     setFormData({...formData, [key]: event.target.value});
-
-    if(formData.email.length >= 3 && formData.name.length >= 3 && formData.phone.length >= 6) {
-      setIsButtonDisabled(false);
-    } else {
-      setIsButtonDisabled(true);
-    }
   }
 
   const handleSendForm = () => {
-    setIsButtonDisabled(true);
+    setIsPhoneError(false);
     setIsEmailError(false);
+    setIsNameError(false);
 
     const emailRegexp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     const validationSuccess = emailRegexp.test(formData.email);
 
-    if(validationSuccess){
+    if(!validationSuccess){
+      setIsEmailError(true);
+    }
+
+    if(formData.phone.length < 6){
+      setIsPhoneError(true);
+    }
+
+    if(formData.name.length < 3){
+      setIsNameError(true);
+    }
+    
+    if(validationSuccess && formData.phone.length >= 6 && formData.name.length >= 3){
       //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       //sendDataToServer();
       //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       setFormData({email: '', name: '', phone: '', about: ''});
-      if(typeof handleFormSended !== 'undefined') {
-        handleFormSended();
-      }
-    } else {
-      setIsEmailError(true);
-      setIsButtonDisabled(false);
+      navigate('/form/success');
     }
   }
 
@@ -64,15 +67,15 @@ export default function Feedback(props) {
     <>
       <div className={cls.feedback}>
         <div className={cls.formRow}>
+          <input type="text" value={formData.name} className={isNameError ? cls.fieldError : ''} onChange={(event) => handleChangeData('name', event)} placeholder="имя" />
           <input type="email" className={isEmailError ? cls.fieldError : ''} value={formData.email} onChange={(event) => handleChangeData('email', event)} placeholder="почта" />
-          <input type="text" value={formData.name} onChange={(event) => handleChangeData('name', event)} placeholder="имя" />
         </div>
         <div className={cls.formRow}>
-          <input type="tel" value={formData.phone} onChange={(event) => handleChangeData('phone', event)} placeholder="телефон" />
+          <input type="number" className={isPhoneError ? cls.fieldError : ''} value={formData.phone} onChange={(event) => handleChangeData('phone', event)} placeholder="телефон" />
           <input type="text" value={formData.about} onChange={(event) => handleChangeData('about', event)} placeholder="о проекте" />
         </div>
       </div>
-      <div className={[cls.sendButton, isButtonDisabled && cls.disabled].join(' ')} onClick={() => handleSendForm()}>
+      <div className={cls.sendButton} onClick={() => handleSendForm()}>
         Отправить 
         <ArrowTopRight className={cls.arrowIcon} />
       </div>
