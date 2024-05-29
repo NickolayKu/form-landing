@@ -6,8 +6,228 @@
   justify-content: start;
   gap: 120px;
 
-  img {
+  .firstImage {
+    width: 100%;
+    height: 692px;
+    margin-bottom: 120px;
+  }
+
+  h2 {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 51.25px;
+    color: var(--black);
+    margin-bottom: 57px;
+  }
+
+  h3 {
+    font-family: 'ScaniaSansCYHeadline';
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 40px;
+    color: var(--black);
+    margin-bottom: 51px;
+
+    span {
+      font-family: 'ScaniaSansCYHeadline';
+      font-size: 31px;
+      font-weight: 400;
+      line-height: 40px;
+      color: var(--blue);
+      margin-right: 37px;
+      margin-left: -65px;
+      width: 30px;
+      display: inline-block;
+    }
+  }
+
+  .socialBlockImages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+
+    img {
+      width: calc(100% / 2);
+      height: 484px;
+      
+      &:last-child {
+        height: 408px;
+      }
+    }
+  }
+
+  .sliderContainer {
+    width: 100%;
+    margin-top: -40px;
+    height: 769px;
+    max-height: 769px;
+    background-color: var(--black);
+    border-left: 15px solid var(--yellow);
+    border-right: 15px solid var(--yellow);
+    overflow: hidden;
+
+    &.secondSliderContainer {
+      height: 1112px;
+      max-height: 1112px;
+    }
+    
+    &.thirstSlider {
+      height: 1059px;
+      max-height: 1059px;
+      margin-top: -60px;
+    }
+
+    .sliderBackgroundImage {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 95%;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      filter: blur(16px);
+
+      &.secondSliderImage {
+        background-position: 40% center;
+        background-size: 170%;
+      }
+    }
+  }
+
+  .photoGroup {
     width: 100%;
     height: auto;
+    margin-bottom: 76px;
+  }
+
+  .statsTelegram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .cardsBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: -30px;
+
+      .statsTelegram_card {
+
+        .statsTelegram_card_number {
+          font-family: 'ScaniaSansCYHeadline';
+          font-size: 80px;
+          font-weight: 400;
+          line-height: 100px;
+          color: var(--black);
+          margin-bottom: -47px;
+          text-align: right;
+          padding-right: 22px;
+          padding-left: 8px;
+        }
+        .statsTelegram_card_text {
+          display: flex;
+          flex-direction: row;
+          align-items: end;
+          justify-content: end;
+          font-family: 'ScaniaSansCY';
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 29.4px;
+          text-align: right;
+          color: var(--black);
+          width: 100%;
+          height: 71px;
+          background-color: var(--yellow);
+          padding: 11px 22px;
+        }
+      }
+    }
+
+    .schemeBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .schemeImageBack {
+        width: auto;
+        height: 757px;
+        z-index: 1;
+      }
+      .schemeImageFront {
+        transition: all ease 0.3s;
+        width: auto;
+        height: 610px;
+        position: absolute;
+        z-index: 2;
+        opacity: 0.3;
+        margin-left: -35px;
+        margin-top: -35px;
+        cursor: crosshair;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .statsReels {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .statsReels_card {
+      display: flex;
+      flex-direction: column;
+
+      .statsReels_card_number {
+        font-family: 'ScaniaSansCYHeadline';
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 125px;
+        color: var(--black);
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 7px;
+        
+        span {
+          font-family: 'ScaniaSansCYHeadline';
+          font-size: 35px;
+          font-weight: 400;
+          line-height: 43.75px;
+          color: var(--black);
+        }
+      }
+      .statsReels_card_text {
+        font-family: 'ScaniaSansCY';
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+        color: var(--black);
+        margin-top: -12px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-left: 65px;
+
+      p {
+        font-family: 'ScaniaSansCY';
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+        color: var(--black);
+        margin-bottom: 66px;
+      }
+    }
   }
 }
