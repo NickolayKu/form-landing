@@ -1,9 +1,8 @@
 import { useMetaTags } from "react-metatags-hook";
-import cls from "./PortfolioColizeum.module.scss";
 import PortfolioTitle from "../../components/PortfolioTitle/PortfolioTitle";
-import PortfolioTopgunContent from "../../components/PortfolioTopgunContent/PortfolioTopgunContent";
 import OtherProjects from "../../components/OtherProjects/OtherProjects";
 import Footer from "../../components/Footer/Footer";
+import PortfolioColizeumContent from "../../components/PortfolioColizeumContent/PortfolioColizeumContent";
 
 export default function PortfolioColizeum() {
 
@@ -27,12 +26,7 @@ export default function PortfolioColizeum() {
           tags={projectData.tags}
         />
       </section>
-      <section>
-        <PortfolioTopgunContent />
-      </section>
-      <section className="fullWidthSection">
-        <img src="/images/topgun-3-min.jpg" className={cls.fullWidth} />
-      </section>
+      <PortfolioColizeumContent />
       <section>
         <OtherProjects projectName={projectData.name} />
       </section>
