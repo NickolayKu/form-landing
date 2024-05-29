@@ -8,7 +8,7 @@ import FeedbackForm from "../pages/FeedbackForm/FeedbackForm";
 import PortfolioTopgun from "../pages/PortfolioTopgun/PortfolioTopgun";
 import PortfolioColizeum from "../pages/PortfolioColizeum/PortfolioColizeum";
 import SuccessForm from "../pages/SuccessForm/SuccessForm";
-// import PortfolioMagma from "../pages/PortfolioMagma/PortfolioMagma";
+import PortfolioMagma from "../pages/PortfolioMagma/PortfolioMagma";
 // import Error404 from "../pages/Error404/Error404";
 
 const Routes = [
@@ -41,10 +41,10 @@ const Routes = [
         path: "/projects/colizeum",
         element: <PortfolioColizeum />,
       },
-      // {
-      //   path: "/projects/magma",
-      //   element: <PortfolioMagma />,
-      // },
+      {
+        path: "/projects/magma",
+        element: <PortfolioMagma />,
+      },
     ],
   },
 ];
