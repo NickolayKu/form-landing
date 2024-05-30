@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import ScrollAnimation from "react-animate-on-scroll";
 import cls from "./PortfolioTitle.module.scss";
 
 export default function PortfolioTitle(props) {
@@ -7,9 +6,7 @@ export default function PortfolioTitle(props) {
 
   return (
     <div className={cls.portfolioTitle}>
-      <ScrollAnimation animateIn="fadeInUp" duration={0.6} animateOnce={true}>
         <h1>{title}</h1>
-      </ScrollAnimation>
       <div className={cls.tags}>
         {tags.map((tagItem, index) => {
           return <span key={index}>{tagItem}</span>

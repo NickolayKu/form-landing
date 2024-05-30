@@ -77,8 +77,9 @@
     width: 100%;
     min-width: 100%;
     height: 769.77px;
+    max-height: 769.77px;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center 70%;
   }
 
   .screenImage {

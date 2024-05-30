@@ -1,7 +1,131 @@
 import cls from "./PortfolioColizeumContent.module.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 export default function PortfolioColizeumContent() {
+
+  const [currentSlide1, setCurrentSlide1] = useState(0);
+  const [currentSlide2, setCurrentSlide2] = useState(0);
+  const [currentSlide3, setCurrentSlide3] = useState(0);
+
+  const [slideBackground1, setSlideBackground1] = useState(1);
+  const [slideBackground2, setSlideBackground2] = useState(2);
+  const [slideBackground3, setSlideBackground3] = useState(3);
+
+  const settings1 = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    slidesToShow: 3,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToScroll: 1,
+    centerPadding: "2vw",
+    beforeChange: (index) => {
+      if(currentSlide1 === 5) {
+        setCurrentSlide1(0);
+      } else {
+        setCurrentSlide1(index + 1);
+      }
+
+      if(slideBackground1 === 3){
+        setSlideBackground1(1);
+      } else {
+        setSlideBackground1(slideBackground1 + 1);
+      }
+    },
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  };
+
+  const settings2 = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    slidesToShow: 3,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToScroll: 1,
+    centerPadding: "2vw",
+    beforeChange: (index) => {
+      if(currentSlide2 === 4) {
+        setCurrentSlide2(0);
+      } else {
+        setCurrentSlide2(index + 1);
+      }
+
+      if(slideBackground2 === 3){
+        setSlideBackground2(1);
+      } else {
+        setSlideBackground2(slideBackground2 + 1);
+      }
+    },
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  };
+
+  const settings3 = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    slidesToShow: 3,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToScroll: 1,
+    centerPadding: "2vw",
+    beforeChange: (index) => {
+      if(currentSlide3 === 3) {
+        setCurrentSlide3(0);
+      } else {
+        setCurrentSlide3(index + 1);
+      }
+
+      if(slideBackground1 === 3){
+        setSlideBackground3(1);
+      } else {
+        setSlideBackground3(slideBackground3 + 1);
+      }
+    },
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  };
 
   return (
     <div className={cls.content}>
@@ -29,13 +153,34 @@ export default function PortfolioColizeumContent() {
         </ul>   
       </section>
       <section className="fullWidthSection">
-        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+        
           <div className={cls.sliderContainer}>
-            <div className={cls.sliderBackgroundImage} style={{backgroundImage: `url(/images/colizeum-slider-1.png)`}}>
+            <div className={cls.sliderBackgroundImage} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground1}.png)`}}></div>
 
+            <div className={cls.slickContainer} style={{marginTop: '-655px', height: '646px'}}>
+              <Slider {...settings1}>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-1.png)`}}></div>
+                  </div>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 1 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-2.png)`}}></div>
+                  </div>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 2 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-3.png)`}}></div>
+                  </div>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 3 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-4.png)`}}></div>
+                  </div>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 4 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-5.png)`}}></div>
+                  </div>
+                  <div className={cls.sliderCardContainer}>
+                    <div className={[cls.firstSliderCard, currentSlide1 === 5 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-6.png)`}}></div>
+                  </div>
+              </Slider>
             </div>
           </div>
-        </ScrollAnimation>
+        
       </section>
       <section>
         <ul>
@@ -118,8 +263,46 @@ export default function PortfolioColizeumContent() {
       <section className="fullWidthSection">
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.secondSliderContainer].join(' ')}>
-            <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2.png)`}}>
+            <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground2}.png)`}}></div>
+            <div className={cls.slickContainer} style={{marginTop: '-995px', height: '885px'}}>
 
+              <Slider {...settings2}>
+                  <div className={cls.videoSliderCardContainer}>
+                    <div className={[cls.secondSliderCard, currentSlide2 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-1.png)`}}>
+                        <div className={cls.videoPlayer}>
+                          <ReactPlayer muted={true} playing={currentSlide2 === 0} width={'100%'} height={'100%'} url='/video/colizeum-video-1.mp4' />
+                        </div>
+                    </div>
+                  </div>
+                  <div className={cls.videoSliderCardContainer}>
+                    <div className={[cls.secondSliderCard, currentSlide2 === 1 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-2.png)`}}>
+                      <div className={cls.videoPlayer}>
+                        <ReactPlayer muted={true} playing={currentSlide2 === 1} width={'100%'} height={'100%'} url='/video/colizeum-video-2.mp4' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={cls.videoSliderCardContainer}>
+                    <div className={[cls.secondSliderCard, currentSlide2 === 2 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-3.png)`}}>
+                      <div className={cls.videoPlayer}>
+                        <ReactPlayer muted={true} playing={currentSlide2 === 2} width={'100%'} height={'100%'} url='/video/colizeum-video-3.mp4' />
+                        </div>
+                    </div>
+                  </div>
+                  <div className={cls.videoSliderCardContainer}>
+                    <div className={[cls.secondSliderCard, currentSlide2 === 3 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-4.png)`}}>
+                      <div className={cls.videoPlayer}>
+                        <ReactPlayer muted={true} playing={currentSlide2 === 3} width={'100%'} height={'100%'} url='/video/colizeum-video-4.mp4' />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={cls.videoSliderCardContainer}>
+                    <div className={[cls.secondSliderCard, currentSlide2 === 4 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-5.png)`}}>
+                      <div className={cls.videoPlayer}>
+                        <ReactPlayer muted={true} playing={currentSlide2 === 4} width={'100%'} height={'100%'} url='/video/colizeum-video-5.mp4' />
+                      </div>
+                    </div>
+                  </div>
+              </Slider>
             </div>
           </div>
         </ScrollAnimation>
@@ -150,8 +333,22 @@ export default function PortfolioColizeumContent() {
       <section className="fullWidthSection">
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.thirstSlider].join(' ')}>
-            <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3.png)`}}>
-
+            <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground3}.png)`}}></div>
+            <div className={cls.slickContainer} style={{marginTop: '-942px', height: '890px'}}>
+              <Slider {...settings3}>
+                <div className={cls.sliderCardContainer}>
+                  <div className={[cls.thirstSliderCard, currentSlide3 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3-1.png)`}}></div>
+                </div>
+                <div className={cls.sliderCardContainer}>
+                  <div className={[cls.thirstSliderCard, currentSlide3 === 1 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3-2.png)`}}></div>
+                </div>
+                <div className={cls.sliderCardContainer}>
+                  <div className={[cls.thirstSliderCard, currentSlide3 === 2 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3-3.png)`}}></div>
+                </div>
+                <div className={cls.sliderCardContainer}>
+                  <div className={[cls.thirstSliderCard, currentSlide3 === 3 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3-2.png)`}}></div>
+                </div>
+              </Slider>
             </div>
           </div>
         </ScrollAnimation>

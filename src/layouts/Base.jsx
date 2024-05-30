@@ -13,8 +13,16 @@ export default function BaseLayout() {
       setIsLoaded(true);
     }, 100);
 
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div style={{transition: "all ease 0.6s", opacity: isLoaded ? 1 : 0}}>
