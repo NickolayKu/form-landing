@@ -46,8 +46,7 @@ export default function PortfolioColizeumContent() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: "-162vw",
         }
       },
     ]
@@ -83,8 +82,7 @@ export default function PortfolioColizeumContent() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: "-180vw",
         }
       },
     ]
@@ -120,8 +118,7 @@ export default function PortfolioColizeumContent() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: "-192vw",
         }
       },
     ]
@@ -157,7 +154,7 @@ export default function PortfolioColizeumContent() {
           <div className={cls.sliderContainer}>
             <div className={cls.sliderBackgroundImage} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground1}.png)`}}></div>
 
-            <div className={cls.slickContainer} style={{marginTop: '-655px', height: '646px'}}>
+            <div className={[cls.slickContainer, cls.firstContainer].join(' ')}>
               <Slider {...settings1}>
                   <div className={cls.sliderCardContainer}>
                     <div className={[cls.firstSliderCard, currentSlide1 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-1.png)`}}></div>
@@ -264,7 +261,7 @@ export default function PortfolioColizeumContent() {
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.secondSliderContainer].join(' ')}>
             <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground2}.png)`}}></div>
-            <div className={cls.slickContainer} style={{marginTop: '-995px', height: '885px'}}>
+            <div className={[cls.slickContainer, cls.secondContainer].join(' ')}>
 
               <Slider {...settings2}>
                   <div className={cls.videoSliderCardContainer}>
@@ -334,7 +331,7 @@ export default function PortfolioColizeumContent() {
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.thirstSlider].join(' ')}>
             <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground3}.png)`}}></div>
-            <div className={cls.slickContainer} style={{marginTop: '-942px', height: '890px'}}>
+            <div className={[cls.slickContainer, cls.thirstContainer].join(' ')}>
               <Slider {...settings3}>
                 <div className={cls.sliderCardContainer}>
                   <div className={[cls.thirstSliderCard, currentSlide3 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-3-1.png)`}}></div>

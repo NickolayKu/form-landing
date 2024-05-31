@@ -51,10 +51,6 @@
     transition: all ease 0.2s;
     cursor: pointer;
 
-    &:hover {
-      color: var(--blue);
-    }
-
     @media (max-width: 820px) {
       font-size: 16px;
       line-height: 16px;
@@ -68,6 +64,14 @@
         width: 18px;
         height: 18px;
         margin-top: -1px;
+      }
+    }
+
+    &:hover {
+      color: var(--blue);
+
+      .arrowIcon path{
+        stroke: var(--blue);
       }
     }
   }
