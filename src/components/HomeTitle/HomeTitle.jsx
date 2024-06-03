@@ -16,7 +16,7 @@ export default function HomeTitle() {
       <div className={cls.homeTitle}>
         <h1>
           <div className={[cls.formLogoImage, isLoaded && cls.showing].join(' ')}></div>
-          <ScrollAnimation animateIn="fadeInUp" offset={800} duration={1} animateOnce={true}>
+          <ScrollAnimation animateIn="fadeInUp" offset={1000} delay={0} duration={1} animateOnce={true}>
             Креативная студия, создающая<br/>
             взаимодействие человека
           </ScrollAnimation>

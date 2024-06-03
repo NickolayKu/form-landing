@@ -4,7 +4,8 @@ import cls from "./Feedback.module.scss";
 import ArrowTopRight from "../../assets/icons/top-right-arrow.svg?react";
 import { Link, useNavigate  } from "react-router-dom";
 
-export default function Feedback() {
+export default function Feedback(props) {
+  const { margin = false } = props;
   const navigate = useNavigate();
 
   const [isEmailError, setIsEmailError] = useState(false);
@@ -80,7 +81,7 @@ export default function Feedback() {
         <ArrowTopRight className={cls.arrowIcon} />
       </div>
 
-      <div className={cls.policyBlock}>
+      <div className={[cls.policyBlock, margin && cls.bottomMargin].join(' ')}>
         <span>
           Нажав на кнопку, я соглашаюсь на обработку<br/>
           <Link to='/'>персональных данных</Link>

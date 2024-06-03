@@ -18,11 +18,12 @@ export default function Header() {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      if ( (scrollTop > lastScroll) && (scrollTop > 370) ) {
+      if ( (scrollTop > lastScroll) && (scrollTop > 370)) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
       }
+
       lastScroll = scrollTop;
     };
 
@@ -36,7 +37,7 @@ export default function Header() {
   }, [location]);
 
   return (
-      <header className={[cls.header, isHidden && cls.hidden].join(' ')}>
+      <header className={[cls.header, (isHidden && isMobileMenuOpen === false) && cls.hidden].join(' ')}>
         <div className="container">
           <div className={cls.content}>
             <a href='/'>
@@ -49,7 +50,7 @@ export default function Header() {
               <a className={cls.headerLink} href='/contacts'>Контакты</a>
             )}
             <div className={cls.mobileMenuButton}>
-              <MenuBars onClick={() => setIsMobileMenuOpen(true)} className={cls.menuBarsIcon}/>
+              <MenuBars onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={[cls.menuBarsIcon, isMobileMenuOpen && cls.animateToCross].join(' ')}/>
             </div>
           </div>
         </div>

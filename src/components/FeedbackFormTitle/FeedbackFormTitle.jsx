@@ -11,7 +11,7 @@ export default function FeedbackFormTitle() {
       </ScrollAnimation>
 
       <div className={cls.content}>
-        <Feedback />
+        <Feedback margin={true}/>
       </div>
     </div>
   );

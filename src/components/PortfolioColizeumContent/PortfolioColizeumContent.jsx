@@ -136,7 +136,7 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
             <h3>
               <span>1.</span>
-              Разработка контент-плана и графической подачи для<br/> социальных сетей
+              Разработка контент-плана и графической подачи для социальных сетей
             </h3>
             </ScrollAnimation>
             <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-кодкибер арен колизеум, а вообще</p>
@@ -222,7 +222,7 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
               <h3>
                 <span>3.</span>
-                разработка reels контента и привлечение целевых<br/> показателей
+                разработка reels контента и привлечение целевых показателей
               </h3>
             </ScrollAnimation>
             <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>
@@ -310,17 +310,20 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
               <h3>
                 <span>4.</span>
-                разработка reels контента и привлечение целевых<br/> показателей
+                разработка reels контента и привлечение целевых показателей
               </h3>
             </ScrollAnimation>
             <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>
-            <img className={cls.photoGroup} src="/images/colizeum-photos-group.png" />
+            <div>
+              <img className={cls.photoGroupLines} src="/images/colizeum-photos-group-2.png" />
+              <img className={cls.photoGroup} src="/images/colizeum-photos-group-1.png" />
+            </div>
           </li>
           <li>
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
-              <h3>
+              <h3 style={{marginTop: 150}}>
                 <span>5.</span>
-                разработка гибкого и модулированного прайс-листа для всех<br/> арен colizeum
+                разработка гибкого и модулированного прайс-листа для всех арен colizeum
               </h3>
             </ScrollAnimation>
             <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>

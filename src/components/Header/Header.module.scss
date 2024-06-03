@@ -86,6 +86,23 @@
       .menuBarsIcon {
         width: 20px;
         height: 20px;
+        z-index: 9999;
+
+        & path {
+          transition: all ease 0.4s;
+        }
+
+        &.animateToCross {
+          width: 20px;
+          height: 20px;
+
+          path:nth-child(1) {
+            transform: translateY(14.5px) translate(-2px) rotate(-45deg);
+          }
+          path:nth-child(2) {
+            transform: translateY(-4px) translate(11.5px) rotate(45deg);
+          }
+        }
       }
 
       .crossIcon {
