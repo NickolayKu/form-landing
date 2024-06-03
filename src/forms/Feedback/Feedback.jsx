@@ -56,7 +56,7 @@ export default function Feedback() {
     
     if(validationSuccess && formData.phone.length >= 6 && formData.name.length >= 3){
       //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      //sendDataToServer();
+      sendDataToServer();
       //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       setFormData({email: '', name: '', phone: '', about: ''});
       navigate('/form/success');

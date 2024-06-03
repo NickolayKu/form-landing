@@ -31,8 +31,8 @@
     }
 
     @media (max-width: 640px) {
-      font-size: 18px;
-      line-height: 25.2px;
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 
@@ -100,6 +100,7 @@
     max-width: 1440px;
     padding: 46px 20px;
     margin: 0 auto;
+    color: var(--black);
 
     @media (max-width: 1600px) {
       max-width: 1202px;
@@ -132,9 +133,14 @@
 
       a {
         text-decoration: none;
+        color: var(--black);
 
         &:hover {
           color: var(--blue);
+
+          @media (max-width: 900px) {
+            color: var(--black);
+          }
         }
       }
     }

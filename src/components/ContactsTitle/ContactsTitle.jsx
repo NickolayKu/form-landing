@@ -6,7 +6,7 @@ export default function ContContactsTitlects() {
 
   return (
     <div className={cls.contacts}>
-      <ScrollAnimation animateIn="fadeInUp" duration={0.6} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeInUp" offset={800} duration={0.6} animateOnce={true}>
         <h1>От вас желание, на нас реализация</h1>
       </ScrollAnimation>
 

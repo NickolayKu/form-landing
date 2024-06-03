@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import cls from "./Header.module.scss";
 import Logo from "../../assets/logo.svg?react";
 import MenuBars from "../../assets/icons/menu-bars.svg?react";
@@ -18,7 +18,7 @@ export default function Header() {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      if (scrollTop > lastScroll) {
+      if ( (scrollTop > lastScroll) && (scrollTop > 370) ) {
         setIsHidden(true);
       } else {
         setIsHidden(false);

@@ -257,7 +257,7 @@ export default function PortfolioColizeumContent() {
           </li>
         </ul> 
       </section>
-      <section className="fullWidthSection">
+      {/* <section className="fullWidthSection">
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.secondSliderContainer].join(' ')}>
             <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground2}.png)`}}></div>
@@ -303,7 +303,7 @@ export default function PortfolioColizeumContent() {
             </div>
           </div>
         </ScrollAnimation>
-      </section>
+      </section> */}
       <section>
         <ul>
           <li>

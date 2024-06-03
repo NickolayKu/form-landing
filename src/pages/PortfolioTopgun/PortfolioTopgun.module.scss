@@ -1,15 +1,16 @@
 .fullWidth {
   width: 100%;
-  height: 795px;
-  margin-top: 158.6px;
-  max-height: 795px;
+  height: auto;
+  margin-top: 150px;
 
   @media (max-width: 1600px) {
     max-height: 715px;
+    margin-top: 105px;
   }
 
   @media (max-width: 960px) {
     max-height: 329px;
+    margin-top: 40px;
   }
 }
 

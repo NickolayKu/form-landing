@@ -17,8 +17,14 @@ export default function BaseLayout() {
       window.scrollTo(0, 0);
     }, 50);
 
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 90);
+
     window.scrollTo(0, 0);
-  }, [location]);
+
+    return () => setIsLoaded(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

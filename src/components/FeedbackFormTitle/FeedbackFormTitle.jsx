@@ -6,7 +6,7 @@ export default function FeedbackFormTitle() {
 
   return (
     <div className={cls.feedbackFormTitle}>
-      <ScrollAnimation animateIn="fadeInUp" initiallyVisible={true} delay={0.2} duration={0.6} animateOnce={true}>
+      <ScrollAnimation animateIn="fadeInUp" offset={800} initiallyVisible={true} delay={0.2} duration={0.6} animateOnce={true}>
         <h1>Добро пожаловать</h1>
       </ScrollAnimation>
 

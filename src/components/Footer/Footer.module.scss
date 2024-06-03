@@ -25,6 +25,7 @@
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+    color: var(--white);
 
     @media (max-width: 1600px) {
       max-width: 1202px;
@@ -132,6 +133,10 @@
 
         &:hover {
           color: var(--blue);
+
+          @media (max-width: 730px) {
+            color: var(--white);
+          }
         }
       }
     }
