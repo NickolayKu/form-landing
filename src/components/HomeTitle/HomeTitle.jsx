@@ -22,7 +22,10 @@ export default function HomeTitle() {
           </ScrollAnimation>
           <span className={[cls.titleSpan, isLoaded && cls.showing].join(' ')}>
             <a href="/form">
-              с Вашим предложением
+              <div className={cls.animatedLink}>
+                <span>с Вашим предложением</span>
+                <span>с Вашим предложением</span>
+              </div>
               <div className={cls.line}></div>
             </a>
             <div className={cls.formArrowImage}></div>

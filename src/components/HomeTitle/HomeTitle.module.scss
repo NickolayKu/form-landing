@@ -60,6 +60,19 @@
       opacity: 0;
       transition: all ease 0.9s;
 
+      .animatedLink {
+        display: inline-block;
+        transition: all ease 0.3s;
+        height: 50px;
+        overflow: hidden;
+
+        span {
+          &:last-child {
+            margin-bottom: -50px;
+          }
+        }
+      }
+
       &.showing {
         opacity: 1;
       }
@@ -162,6 +175,7 @@
         opacity: 0.3;
         float: right;
         transition: all ease 0.3s;
+        margin-top: -8px;
 
         @media (max-width: 1600px) {
           width: 632px;
@@ -178,8 +192,15 @@
     }
 
     a:hover {
-      transition: all ease 0.1s;
-      animation: blink 0.5s linear 1;
+
+      .animatedLink span{  
+        &:first-child {
+          margin-top: -55px;
+        } 
+        &:last-child {
+          margin-bottom: 0px;
+        }  
+      }
 
       .line {
         opacity: 1;

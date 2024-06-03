@@ -321,7 +321,7 @@ export default function PortfolioColizeumContent() {
           </li>
           <li>
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
-              <h3 style={{marginTop: 150}}>
+              <h3 style={window.screen.width > 450 ? {marginTop: 150} : {marginTop: 60}}>
                 <span>5.</span>
                 разработка гибкого и модулированного прайс-листа для всех арен colizeum
               </h3>
