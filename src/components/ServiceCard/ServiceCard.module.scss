@@ -18,7 +18,13 @@
   }
 
   .number {
+    transition: all ease 0.3s;
     color: var(--blue);
+    opacity: 0.3;
+
+    @media (max-width: 960px) {
+      opacity: 1;
+    }
   }
 
   .title {
@@ -66,6 +72,12 @@
       max-width: unset;
       font-size: 15px;
       line-height: 21px;
+    }
+  }
+
+  &:hover {
+    .number {
+      opacity: 1;
     }
   }
 }

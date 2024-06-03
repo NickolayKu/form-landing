@@ -5,22 +5,25 @@ import { useEffect, useState } from "react";
 export default function HomeTitle() {
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoadedTitle, setIsLoadedTitle] = useState(false);
+
 
   useEffect(() => {
+    setIsLoaded(true);
     setTimeout(() => {
-      setIsLoaded(true);
+      setIsLoadedTitle(true);
     }, 700);
   }, []);
 
   return (
       <div className={cls.homeTitle}>
         <h1>
-          <div className={[cls.formLogoImage, isLoaded && cls.showing].join(' ')}></div>
-          <ScrollAnimation animateIn="fadeInUp" offset={1000} delay={0} duration={1} animateOnce={true}>
+          <div className={[cls.formLogoImage, isLoadedTitle && cls.showing].join(' ')}></div>
+          <div className={isLoaded ? cls.loaded : ""}>
             Креативная студия, создающая<br/>
             взаимодействие человека
-          </ScrollAnimation>
-          <span className={[cls.titleSpan, isLoaded && cls.showing].join(' ')}>
+          </div>
+          <span className={[cls.titleSpan, isLoadedTitle && cls.showing].join(' ')}>
             <a href="/form">
               <div className={cls.animatedLink}>
                 <span>с Вашим предложением</span>

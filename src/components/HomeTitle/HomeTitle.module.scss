@@ -1,3 +1,5 @@
+@import '../../utils/animate.css';
+
 .homeTitle {
   width: 100%;
   padding-top: 247px;
@@ -26,6 +28,13 @@
     text-align: left;
     color: var(--black);
     width: 100%;
+    transition: all ease 0.5s;
+
+    div {
+      &.loaded {
+        animation: fadeInUp 1s 1;
+      }
+    }
 
     a {
       text-decoration: none;
@@ -207,11 +216,5 @@
       }
     }
   }
-}
-
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
 }
 

@@ -1,15 +1,19 @@
 /* eslint-disable react/prop-types */
-import ScrollAnimation from "react-animate-on-scroll";
 import cls from "./PortfolioTitle.module.scss";
+import { useEffect, useState } from "react";
 
 export default function PortfolioTitle(props) {
   const { title, text, tags } = props;
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <div className={cls.portfolioTitle}>
-        <ScrollAnimation animateIn="fadeInUp" offset={1000} delay={0} duration={1} animateOnce={true}>
-          <h1>{title}</h1>
-        </ScrollAnimation>
+          <h1 className={isLoaded ? cls.loaded : ""}>{title}</h1>
         
       <div className={cls.tags}>
         {tags.map((tagItem, index) => {
