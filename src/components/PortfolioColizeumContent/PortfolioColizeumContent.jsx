@@ -267,35 +267,35 @@ export default function PortfolioColizeumContent() {
                   <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 0 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-1.png)`}}>
                         <div className={cls.videoPlayer}>
-                          <ReactPlayer muted={true} playing={currentSlide2 === 0} width={'100%'} height={'100%'} url='/video/colizeum-video-1.mp4' />
+                          <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 0} width={'100%'} height={'100%'} url='/video/colizeum-video-1.mp4' />
                         </div>
                     </div>
                   </div>
                   <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 1 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-2.png)`}}>
                       <div className={cls.videoPlayer}>
-                        <ReactPlayer muted={true} playing={currentSlide2 === 1} width={'100%'} height={'100%'} url='/video/colizeum-video-2.mp4' />
+                        <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 1} width={'100%'} height={'100%'} url='/video/colizeum-video-2.mp4' />
                       </div>
                     </div>
                   </div>
                   <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 2 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-3.png)`}}>
                       <div className={cls.videoPlayer}>
-                        <ReactPlayer muted={true} playing={currentSlide2 === 2} width={'100%'} height={'100%'} url='/video/colizeum-video-3.mp4' />
+                        <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 2} width={'100%'} height={'100%'} url='/video/colizeum-video-3.mp4' />
                         </div>
                     </div>
                   </div>
                   <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 3 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-4.png)`}}>
                       <div className={cls.videoPlayer}>
-                        <ReactPlayer muted={true} playing={currentSlide2 === 3} width={'100%'} height={'100%'} url='/video/colizeum-video-4.mp4' />
+                        <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 3} width={'100%'} height={'100%'} url='/video/colizeum-video-4.mp4' />
                       </div>
                     </div>
                   </div>
                   <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 4 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-5.png)`}}>
                       <div className={cls.videoPlayer}>
-                        <ReactPlayer muted={true} playing={currentSlide2 === 4} width={'100%'} height={'100%'} url='/video/colizeum-video-5.mp4' />
+                        <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 4} width={'100%'} height={'100%'} url='/video/colizeum-video-5.mp4' />
                       </div>
                     </div>
                   </div>
