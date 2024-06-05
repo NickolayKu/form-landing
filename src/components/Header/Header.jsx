@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import MobileMenu from "../../modals/MobileMenu/MobileMenu";
 
 export default function Header() {
+  const loadedLogoNumber = window.localStorage.getItem('logoNumber') || 1;
+
   const location = useLocation();
   const [isHidden, setIsHidden] = useState(false);
 
@@ -39,16 +41,26 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  console.log('loadedLogoNumber', loadedLogoNumber)
+
   const logosCount = 4;
-  const [currentLogoNumber, setCurrentLogoNumber] = useState(1);
-  const [isLogoHovered, setIsLogoHovered] = useState(false);
+  const [currentLogoNumber, setCurrentLogoNumber] = useState(Number(loadedLogoNumber));
+  const [isLogoHovered, setIsLogoHovered] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLogoHovered(false);
+    }, 2000);
+  }, []);
 
   const handleChangelogo = () => {
     if(isLogoHovered === false){
       if(currentLogoNumber + 1 > logosCount) {
         setCurrentLogoNumber(1);
+        window.localStorage.setItem('logoNumber', 1);
       } else {
         setCurrentLogoNumber(currentLogoNumber + 1);
+        window.localStorage.setItem('logoNumber', currentLogoNumber + 1);
       }
       setIsLogoHovered(true);
     }

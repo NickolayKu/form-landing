@@ -210,6 +210,10 @@
         } 
         &:last-child {
           margin-bottom: 0px;
+
+          @media (max-width: 1600px) {
+            margin-top: 7px;
+          }
         }  
       }
 

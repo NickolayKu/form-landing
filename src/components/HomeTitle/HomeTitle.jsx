@@ -7,10 +7,21 @@ export default function HomeTitle() {
   const [isLoadedTitle, setIsLoadedTitle] = useState(false);
 
   useEffect(() => {
+    const userAgentString = window.navigator.userAgent;
+    let isSafariAgent = userAgentString.indexOf("Safari") > -1;
+    let isChromeAgent = userAgentString.indexOf("Chrome") > -1;
+    if ((isChromeAgent) && (isSafariAgent)) isSafariAgent = false;
+
     setIsLoaded(true);
-    setTimeout(() => {
-      setIsLoadedTitle(true);
-    }, 950);
+    if(isSafariAgent){
+      setTimeout(() => {
+        setIsLoadedTitle(true);
+      }, 450);
+    } else {
+      setTimeout(() => {
+        setIsLoadedTitle(true);
+      }, 950);
+    }
   }, []);
 
   return (
