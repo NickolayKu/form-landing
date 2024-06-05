@@ -6,6 +6,10 @@ export default function BaseLayout() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState(false);
 
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
   useEffect(() => {
     setIsLoaded(false);
 
@@ -21,10 +25,23 @@ export default function BaseLayout() {
       window.scrollTo(0, 0);
     }, 90);
 
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 120);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 160);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 200);
+    
+
     window.scrollTo(0, 0);
 
     return () => setIsLoaded(false);
-  }, [location.pathname]);
+  }, [location]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -1,5 +1,6 @@
 import cls from "./PortfolioMagmaContent.module.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
+import Union2 from "../../assets/union-2.svg?react";
 
 export default function PortfolioMagmaContent() {
 
@@ -20,11 +21,12 @@ export default function PortfolioMagmaContent() {
             <img src="/images/magma-union-1.png" />
           </div>
           <div className={cls.union}>
-            {window.screen.width <= 900 ? (
+            {/* {window.screen.width <= 900 ? (
               <img src="/images/magma-union-2-alt.png" />
             ) : (
               <img src="/images/magma-union-2.png" />
-            )}
+            )} */}
+            <Union2 className={cls.unionSVG} />
           </div>
           <div className={cls.union}>
             <img src="/images/magma-union-3.png" />

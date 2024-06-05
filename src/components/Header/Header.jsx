@@ -1,6 +1,9 @@
 import { useLocation } from "react-router-dom";
 import cls from "./Header.module.scss";
-import Logo from "../../assets/logo.svg?react";
+import Logo1 from "../../assets/logos/logo-1.svg?react";
+import Logo2 from "../../assets/logos/logo-2.svg?react";
+import Logo3 from "../../assets/logos/logo-3.svg?react";
+import Logo4 from "../../assets/logos/logo-4.svg?react";
 import MenuBars from "../../assets/icons/menu-bars.svg?react";
 import StartProjectButton from "../StartProjectButton/StartProjectButton";
 import { useEffect, useState } from "react";
@@ -36,12 +39,30 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  const logosCount = 4;
+  const [currentLogoNumber, setCurrentLogoNumber] = useState(1);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
+
+  const handleChangelogo = () => {
+    if(isLogoHovered === false){
+      if(currentLogoNumber + 1 > logosCount) {
+        setCurrentLogoNumber(1);
+      } else {
+        setCurrentLogoNumber(currentLogoNumber + 1);
+      }
+      setIsLogoHovered(true);
+    }
+  }
+
   return (
       <header className={[cls.header, (isHidden && isMobileMenuOpen === false) && cls.hidden].join(' ')}>
         <div className="container">
           <div className={cls.content}>
-            <a href='/'>
-              <Logo className={cls.logoSVG} />
+            <a href='/' className={cls.logoLink} onMouseLeave={() => setIsLogoHovered(false)} onMouseEnter={() => handleChangelogo()}>
+              {currentLogoNumber === 1 && <Logo1 className={cls.logoSVG} />}
+              {currentLogoNumber === 2 && <Logo2 className={cls.logoSVG} />}
+              {currentLogoNumber === 3 && <Logo3 className={cls.logoSVG} />}
+              {currentLogoNumber === 4 && <Logo4 className={cls.logoSVG} />}
             </a>
             <StartProjectButton />
             {location.pathname === '/contacts' ? (

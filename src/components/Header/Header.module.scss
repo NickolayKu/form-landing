@@ -35,6 +35,7 @@
     .logoSVG {
       width: 110px;
       height: 21px;
+      transition: all ease 0.4s;
 
       @media (max-width: 1600px) {
         width: 91px;
@@ -44,6 +45,14 @@
       @media (max-width: 550px) {
         width: 76px;
         height: 14px;
+      }
+    }
+
+    .logoLink {
+      transition: all ease 0.4s;
+
+      &:hover {
+        animation: logo-animation 0.4s 1;
       }
     }
 
@@ -113,3 +122,14 @@
   }
 }
 
+@keyframes logo-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

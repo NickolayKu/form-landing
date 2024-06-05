@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import cls from "./MobileMenu.module.scss";
-import Logo from "../../assets/logo.svg?react";
 import { Link } from "react-router-dom";
 
 export default function MobileMenu(props) {

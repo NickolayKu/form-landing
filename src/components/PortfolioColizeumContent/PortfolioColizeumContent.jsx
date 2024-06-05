@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import cls from "./PortfolioColizeumContent.module.scss";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Slider from "react-slick";
@@ -5,6 +6,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
 import ReactPlayer from 'react-player';
+import ChevronLeft from "../../assets/icons/left-chevron.svg?react";
+import ChevronRight from "../../assets/icons/right-chevron.svg?react";
+
+function SliderNextArrow(props) {
+  const { onClick, className } = props;
+  return (
+    <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
+      <ChevronRight className={cls.arrowIconSVG} />
+    </div>
+  );
+}
+
+function SliderPrevArrow(props) {
+  const { onClick, className } = props;
+  return (
+    <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
+      <ChevronLeft className={cls.arrowIconSVG}/>
+    </div>
+  );
+}
 
 export default function PortfolioColizeumContent() {
 
@@ -18,7 +39,11 @@ export default function PortfolioColizeumContent() {
 
   const settings1 = {
     dots: false,
+    // nextArrow: <SliderNextArrow/>,
+    // prevArrow: <SliderPrevArrow/>,
     arrows: false,
+    draggable: false,
+    swipe: false,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -30,13 +55,13 @@ export default function PortfolioColizeumContent() {
     slidesToScroll: 1,
     centerPadding: "2vw",
     beforeChange: (index) => {
-      if(currentSlide1 === 5) {
+      if(currentSlide1 === 3) {
         setCurrentSlide1(0);
       } else {
         setCurrentSlide1(index + 1);
       }
 
-      if(slideBackground1 === 3){
+      if(slideBackground1 === 9){
         setSlideBackground1(1);
       } else {
         setSlideBackground1(slideBackground1 + 1);
@@ -47,6 +72,7 @@ export default function PortfolioColizeumContent() {
         breakpoint: 600,
         settings: {
           centerPadding: "-162vw",
+          autoplay: true,
         }
       },
     ]
@@ -54,7 +80,11 @@ export default function PortfolioColizeumContent() {
 
   const settings2 = {
     dots: false,
+    // nextArrow: <SliderNextArrow className={cls.secondSliderArrows}/>,
+    // prevArrow: <SliderPrevArrow className={cls.secondSliderArrows}/>,
     arrows: false,
+    draggable: false,
+    swipe: false,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -66,13 +96,13 @@ export default function PortfolioColizeumContent() {
     slidesToScroll: 1,
     centerPadding: "2vw",
     beforeChange: (index) => {
-      if(currentSlide2 === 4) {
+      if(currentSlide2 === 3) {
         setCurrentSlide2(0);
       } else {
         setCurrentSlide2(index + 1);
       }
 
-      if(slideBackground2 === 3){
+      if(slideBackground2 === 9){
         setSlideBackground2(1);
       } else {
         setSlideBackground2(slideBackground2 + 1);
@@ -82,6 +112,7 @@ export default function PortfolioColizeumContent() {
       {
         breakpoint: 600,
         settings: {
+          autoplay: true,
           centerPadding: "-180vw",
         }
       },
@@ -90,7 +121,11 @@ export default function PortfolioColizeumContent() {
 
   const settings3 = {
     dots: false,
+    // nextArrow: <SliderNextArrow/>,
+    // prevArrow: <SliderPrevArrow/>,
     arrows: false,
+    draggable: false,
+    swipe: false,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -108,7 +143,7 @@ export default function PortfolioColizeumContent() {
         setCurrentSlide3(index + 1);
       }
 
-      if(slideBackground1 === 3){
+      if(slideBackground1 === 9){
         setSlideBackground3(1);
       } else {
         setSlideBackground3(slideBackground3 + 1);
@@ -118,6 +153,7 @@ export default function PortfolioColizeumContent() {
       {
         breakpoint: 600,
         settings: {
+          autoplay: true,
           centerPadding: "-192vw",
         }
       },
@@ -168,12 +204,12 @@ export default function PortfolioColizeumContent() {
                   <div className={cls.sliderCardContainer}>
                     <div className={[cls.firstSliderCard, currentSlide1 === 3 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-4.png)`}}></div>
                   </div>
-                  <div className={cls.sliderCardContainer}>
+                  {/* <div className={cls.sliderCardContainer}>
                     <div className={[cls.firstSliderCard, currentSlide1 === 4 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-5.png)`}}></div>
                   </div>
                   <div className={cls.sliderCardContainer}>
                     <div className={[cls.firstSliderCard, currentSlide1 === 5 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-1-6.png)`}}></div>
-                  </div>
+                  </div> */}
               </Slider>
             </div>
           </div>
@@ -257,7 +293,7 @@ export default function PortfolioColizeumContent() {
           </li>
         </ul> 
       </section>
-      {/* <section className="fullWidthSection">
+      <section className="fullWidthSection">
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className={[cls.sliderContainer, cls.secondSliderContainer].join(' ')}>
             <div className={[cls.sliderBackgroundImage, cls.secondSliderImage].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-${slideBackground2}.png)`}}></div>
@@ -292,18 +328,18 @@ export default function PortfolioColizeumContent() {
                       </div>
                     </div>
                   </div>
-                  <div className={cls.videoSliderCardContainer}>
+                  {/* <div className={cls.videoSliderCardContainer}>
                     <div className={[cls.secondSliderCard, currentSlide2 === 4 && cls.current].join(' ')} style={{backgroundImage: `url(/images/colizeum-slider-2-5.png)`}}>
                       <div className={cls.videoPlayer}>
                         <ReactPlayer playsinline={true} muted={true} playing={currentSlide2 === 4} width={'100%'} height={'100%'} url='/video/colizeum-video-5.mp4' />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
               </Slider>
             </div>
           </div>
         </ScrollAnimation>
-      </section> */}
+      </section>
       <section>
         <ul>
           <li>
