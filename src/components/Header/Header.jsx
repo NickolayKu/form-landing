@@ -41,8 +41,6 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  console.log('loadedLogoNumber', loadedLogoNumber)
-
   const logosCount = 4;
   const [currentLogoNumber, setCurrentLogoNumber] = useState(Number(loadedLogoNumber));
   const [isLogoHovered, setIsLogoHovered] = useState(true);
@@ -51,7 +49,7 @@ export default function Header() {
     setTimeout(() => {
       setIsLogoHovered(false);
     }, 2000);
-  }, []);
+  }, [location]);
 
   const handleChangelogo = () => {
     if(isLogoHovered === false){
