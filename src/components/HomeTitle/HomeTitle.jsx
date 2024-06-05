@@ -10,7 +10,7 @@ export default function HomeTitle() {
     setIsLoaded(true);
     setTimeout(() => {
       setIsLoadedTitle(true);
-    }, 850);
+    }, 950);
   }, []);
 
   return (
