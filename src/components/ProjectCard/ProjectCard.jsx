@@ -4,14 +4,17 @@ import cls from "./ProjectCard.module.scss";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export default function ProjectCard(props) {
-  const { title, image, tags, link } = props;
+  const { title, image, tags, link, soon } = props;
 
   return (
     <div className={cls.projectCard}>
       <Link to={link}>
         <div className={cls.image} style={{backgroundImage: `url(/images/${image})`}}></div>
         <ScrollAnimation animateIn="fadeInUp" offset={1550} initiallyVisible={true} delay={0} duration={0.5} animateOnce={true}>
-          <div className={cls.title}>{title}</div>
+          <div className={cls.cardTitle}>
+            <div className={cls.title}>{title}</div>
+            {soon && <span>soon</span>}
+          </div>
         </ScrollAnimation>
         <div className={cls.tags}>
           {tags.map((item, index) => {

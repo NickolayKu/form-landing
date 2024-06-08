@@ -75,32 +75,63 @@
     }
   }
 
-  .title {
-    font-family: 'ScaniaSansCYHeadline';
-    font-size: 17px;
-    line-height: 21.25px;
-    color: var(--black);
-    width: 100%;
-    margin-top: 24px;
+  .cardTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
 
-    @media (max-width: 1600px) {
-      font-size: 15px;
-      line-height: 18.75px;
-      margin-top: 19px;
+    & span {
+      color: var(--blue);
+      font-family: 'ScaniaSansCYHeadline';
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 21.25px;
+
+      @media (max-width: 1600px) {
+        font-size: 15px;
+        line-height: 18.75px;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 18px;
+        line-height: 22.5px;
+      }
+
+      @media (max-width: 820px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
-    @media (max-width: 960px) {
-      font-size: 18px;
-      line-height: 22.5px;
-      margin-top: 19px;
-    }
-
-    @media (max-width: 820px) {
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: 20px;
+    .title {
+      font-family: 'ScaniaSansCYHeadline';
+      font-size: 17px;
+      line-height: 21.25px;
+      color: var(--black);
+      width: 100%;
+      margin-top: 24px;
+  
+      @media (max-width: 1600px) {
+        font-size: 15px;
+        line-height: 18.75px;
+        margin-top: 19px;
+      }
+  
+      @media (max-width: 960px) {
+        font-size: 18px;
+        line-height: 22.5px;
+        margin-top: 19px;
+      }
+  
+      @media (max-width: 820px) {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
     }
   }
+
 
   .tags {
     width: 100%;
