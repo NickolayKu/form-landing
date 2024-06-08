@@ -6,6 +6,10 @@
   &.fixed {
     position: fixed;
     bottom: 0px;
+
+    @media (max-width: 820px) {
+      position: relative;
+    }
   }
 
   @media (max-width: 1600px) {

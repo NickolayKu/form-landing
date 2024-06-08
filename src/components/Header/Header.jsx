@@ -41,6 +41,20 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  const handleChangeModalVisibility = () => {
+    const bodyElement = document.querySelector('body');
+    const htmlElement = document.querySelector('html');
+    if(isMobileMenuOpen === false){    
+      bodyElement.classList.add('scroll-locked');
+      htmlElement.classList.add('scroll-locked');
+      setIsMobileMenuOpen(true);
+    } else {
+      bodyElement.classList.remove('scroll-locked');
+      htmlElement.classList.remove('scroll-locked');
+      setIsMobileMenuOpen(false);
+    }
+  }
+
   const logosCount = 4;
   const [currentLogoNumber, setCurrentLogoNumber] = useState(Number(loadedLogoNumber));
   const [isLogoHovered, setIsLogoHovered] = useState(true);
@@ -81,12 +95,12 @@ export default function Header() {
               <a className={cls.headerLink} href='/contacts'>Контакты</a>
             )}
             <div className={cls.mobileMenuButton}>
-              <MenuBars onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={[cls.menuBarsIcon, isMobileMenuOpen && cls.animateToCross].join(' ')}/>
+              <MenuBars onClick={() => handleChangeModalVisibility()} className={[cls.menuBarsIcon, isMobileMenuOpen && cls.animateToCross].join(' ')}/>
             </div>
           </div>
         </div>
 
-        <MobileMenu handleCloseMenu={() => setIsMobileMenuOpen(false)} isOpened={isMobileMenuOpen} />
+        <MobileMenu handleCloseMenu={() => handleChangeModalVisibility()} isOpened={isMobileMenuOpen} />
       </header>
   )
 

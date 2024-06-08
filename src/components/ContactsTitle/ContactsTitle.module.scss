@@ -1,3 +1,5 @@
+@import '../../utils/animate.css';
+
 .contacts {
   margin-top: 247px;
 
@@ -19,6 +21,11 @@
     font-weight: 400;
     line-height: 48.75px;
     color: var(--black);
+    transition: all ease 0.5s;
+
+    &.loaded {
+      animation: fadeInUp 1s 1;
+    }
   
     @media (max-width: 1000px) {
       font-size: 35px;

@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 import cls from "./ContactsTitle.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
+import { useEffect, useState } from "react";
 
 export default function ContContactsTitlects() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <div className={cls.contacts}>
-      <ScrollAnimation animateIn="fadeInUp" offset={800} duration={0.6} animateOnce={true}>
-        <h1>От вас желание, на нас реализация</h1>
-      </ScrollAnimation>
+      <h1 className={isLoaded ? cls.loaded : ""}>От вас желание, на нас реализация</h1>
 
       <div className={cls.content}>
         <a className={cls.formLink} href="/form">Начать проект</a>

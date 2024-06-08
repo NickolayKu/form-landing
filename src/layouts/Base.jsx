@@ -36,6 +36,14 @@ export default function BaseLayout() {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 200);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 250);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 300);
     
 
     window.scrollTo(0, 0);

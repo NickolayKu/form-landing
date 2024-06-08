@@ -31,14 +31,14 @@ export default function HomeTitle() {
           <div className={isLoaded ? cls.loaded : ""}>
             Креативная студия, создающая<br/>
             взаимодействие человека {' '}
-            {window.screen.width <= 740 && (
+            {window.innerWidth <= 920 && (
               <>
                 <a className={cls.mobileTitleLink} href="/form">с Вашим предложением</a>
                 <div className={[cls.formArrowImage, isLoadedTitle && cls.showing].join(' ')}></div>
               </>
             )}
           </div>
-          {window.screen.width > 740 && (
+          {window.innerWidth > 920 && (
             <span className={[cls.titleSpan, isLoadedTitle && cls.showing].join(' ')}>
               <a href="/form">
                 <div className={cls.animatedLink}>

@@ -33,6 +33,15 @@ export default function Feedback(props) {
 
   const handleChangeData = (key, event) => {
     setFormData({...formData, [key]: event.target.value});
+    if(key === 'name'){
+      setIsNameError(false);
+    }
+    if(key === 'email'){
+      setIsEmailError(false);
+    }
+    if(key === 'phone'){
+      setIsPhoneError(false);
+    }
   }
 
   const handleSendForm = () => {

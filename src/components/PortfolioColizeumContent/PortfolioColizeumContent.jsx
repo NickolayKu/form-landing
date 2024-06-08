@@ -6,26 +6,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
 import ReactPlayer from 'react-player';
-import ChevronLeft from "../../assets/icons/left-chevron.svg?react";
-import ChevronRight from "../../assets/icons/right-chevron.svg?react";
+//import ChevronLeft from "../../assets/icons/left-chevron.svg?react";
+//import ChevronRight from "../../assets/icons/right-chevron.svg?react";
 
-function SliderNextArrow(props) {
-  const { onClick, className } = props;
-  return (
-    <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
-      <ChevronRight className={cls.arrowIconSVG} />
-    </div>
-  );
-}
+// function SliderNextArrow(props) {
+//   const { onClick, className } = props;
+//   return (
+//     <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
+//       <ChevronRight className={cls.arrowIconSVG} />
+//     </div>
+//   );
+// }
 
-function SliderPrevArrow(props) {
-  const { onClick, className } = props;
-  return (
-    <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
-      <ChevronLeft className={cls.arrowIconSVG}/>
-    </div>
-  );
-}
+// function SliderPrevArrow(props) {
+//   const { onClick, className } = props;
+//   return (
+//     <div className={[cls.sliderArrow, className].join(' ')} onClick={onClick}>
+//       <ChevronLeft className={cls.arrowIconSVG}/>
+//     </div>
+//   );
+// }
 
 export default function PortfolioColizeumContent() {
 
