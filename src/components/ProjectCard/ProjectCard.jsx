@@ -8,7 +8,7 @@ export default function ProjectCard(props) {
 
   return (
     <div className={cls.projectCard}>
-      <Link to={link}>
+      <Link to={link} className={soon === true && cls.disabled}>
         <div className={cls.image} style={{backgroundImage: `url(/images/${image})`}}></div>
         <ScrollAnimation animateIn="fadeInUp" offset={1550} initiallyVisible={true} delay={0} duration={0.5} animateOnce={true}>
           <div className={cls.cardTitle}>

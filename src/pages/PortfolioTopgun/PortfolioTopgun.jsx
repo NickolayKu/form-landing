@@ -1,5 +1,4 @@
 import { useMetaTags } from "react-metatags-hook";
-import cls from "./PortfolioTopgun.module.scss";
 import PortfolioTitle from "../../components/PortfolioTitle/PortfolioTitle";
 import PortfolioTopgunContent from "../../components/PortfolioTopgunContent/PortfolioTopgunContent";
 import OtherProjects from "../../components/OtherProjects/OtherProjects";
@@ -26,9 +25,6 @@ export default function PortfolioTopgun() {
           tags={projectData.tags}
         />
         <PortfolioTopgunContent />
-      </section>
-      <section className="fullWidthSection">
-        <img src="/images/topgun-3-min.jpg" className={cls.fullWidth} />
       </section>
       <section>
         <OtherProjects projectName={projectData.name} />

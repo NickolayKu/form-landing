@@ -54,6 +54,10 @@
 
       &:hover {
         animation: logo-animation 0.4s 1;
+        
+        @media (max-width: 960px) {
+          animation: unset;
+        }
       }
     }
 
@@ -128,7 +132,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);

@@ -38,11 +38,11 @@ export default function BaseLayout() {
     }, 200);
 
     setTimeout(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, -150);
     }, 250);
 
     setTimeout(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, -150);
     }, 300);
     
 

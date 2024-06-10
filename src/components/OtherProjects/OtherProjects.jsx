@@ -9,21 +9,21 @@ export default function OtherProjects(props) {
   const projectsCards = [
     {
       name: 'topgun',
-      image: 'c7a96012faf046e0238087b69a89a0c5-min.jpg',
+      image: 'project-topgun.png',
       title: 'topgun - сеть барбершопов',
       tags: ['UX/UI', 'Разработка'],
       link: '/topgun',
     },
     {
       name: 'colizeum',
-      image: 'fb89c4046b6ae08e3df0fa1a71d9ef11-min.jpg',
-      title: 'colizeum - киберcпортивные арены',
+      image: 'project-colizeum.png',
+      title: 'colizeum - сеть киберарен',
       tags: ['SMM', 'Увеличение трафика'],
       link: '/colizeum',
     },
     {
       name: 'magma',
-      image: '6bcdac3d5991ba7fd927cf4b7e235f9a-min.jpg',
+      image: 'project-magma.png',
       title: 'magma - архитектурное бюро',
       tags: ['Брендинг', 'UX/UI', 'Разработка'],
       link: '/magma',
