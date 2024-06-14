@@ -13,7 +13,7 @@ export default function ProjectCard(props) {
         <ScrollAnimation animateIn="fadeInUp" offset={1550} initiallyVisible={true} delay={0} duration={0.5} animateOnce={true}>
           <div className={cls.cardTitle}>
             <div className={cls.title}>{title}</div>
-            {soon && <span>soon</span>}
+            {soon && <span className={cls.soonSpan}>soon</span>}
           </div>
         </ScrollAnimation>
         <div className={cls.tags}>
