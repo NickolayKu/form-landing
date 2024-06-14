@@ -33,14 +33,6 @@
   .sliderVideoSection {
     width: 100%;
     height: auto;
-
-    &:last-child {
-      margin-top: -40px;
-
-      @media (max-width: 1600px) {
-        margin-top: -80px;
-      }
-    }
   }
 
   .sliderArrow {
@@ -754,10 +746,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    @media (max-width: 1600px) {
-      margin-bottom: 30px;
-    }
 
     @media (max-width: 430px) {
       margin-bottom: 0px;
