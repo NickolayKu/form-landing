@@ -2,7 +2,7 @@ import { useMetaTags } from "react-metatags-hook";
 import HomeTitle from "../../components/HomeTitle/HomeTitle";
 import HomeProjects from "../../components/HomeProjects/HomeProjects";
 import ServicesDirections from "../../components/ServicesDirections/ServicesDirections";
-import ThinksSlider from "../../components/ThinksSlider/ThinksSlider";
+//import ThinksSlider from "../../components/ThinksSlider/ThinksSlider";
 import Footer from "../../components/Footer/Footer";
 import ScrollAnimation from 'react-animate-on-scroll';
 import HomeFeedback from "../../components/HomeFeedback/HomeFeedback";
@@ -25,11 +25,11 @@ export default function Home() {
           <ServicesDirections />
         </ScrollAnimation>
       </section>
-      <section>
+      {/* <section>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <ThinksSlider />
         </ScrollAnimation>
-      </section>
+      </section> */}
       <section>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <HomeFeedback />
