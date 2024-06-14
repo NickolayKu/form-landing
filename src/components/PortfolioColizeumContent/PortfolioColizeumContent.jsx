@@ -34,7 +34,7 @@ export default function PortfolioColizeumContent() {
       </section>
       <section>
         <div className={cls.sliderVideoSection}>
-          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video.mp4' />
+          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video-1.mp4' />
         </div>
       </section>
       <section>
@@ -117,7 +117,7 @@ export default function PortfolioColizeumContent() {
       </section>
       <section>
         <div className={cls.sliderVideoSection} >
-          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video.mp4' />
+          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video-2.mp4' />
         </div>
       </section>
       <section>
@@ -148,7 +148,7 @@ export default function PortfolioColizeumContent() {
       </section>
       <section>
         <div className={cls.sliderVideoSection} style={{marginTop: -40}}>
-          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video.mp4' />
+          <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video-3.mp4' />
         </div>
       </section>
     </div>

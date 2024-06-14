@@ -44,6 +44,14 @@ export default function BaseLayout() {
     setTimeout(() => {
       window.scrollTo(0, -150);
     }, 300);
+
+    setTimeout(() => {
+      window.scrollTo(0, -150);
+    }, 350);
+
+    setTimeout(() => {
+      window.scrollTo(0, -150);
+    }, 400);
     
 
     window.scrollTo(0, 0);
@@ -53,6 +61,10 @@ export default function BaseLayout() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    setTimeout(() => {
+      window.scrollTo(0, -150);
+    }, 300);
   }, []);
 
   return (
