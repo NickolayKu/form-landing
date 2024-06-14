@@ -19,10 +19,10 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
             <h3>
               <span>1.</span>
-              Разработка контент-плана и графической подачи для социальных сетей
+              Разработка контент-плана и графического наполнения социальных сетей
             </h3>
             </ScrollAnimation>
-            <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-кодкибер арен колизеум, а вообще</p>
+            <p>Мы полностью переработали контент план Colizeum и создали принципиально новый стиль и формат подачи информации для целевой аудитории, состоящей в основном из молодежи. В основу контента легли яркие образы и крупные заголовки.</p>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div className={cls.socialBlockImages}>
                 <img src="/images/colizuem-2.png" />
@@ -46,7 +46,7 @@ export default function PortfolioColizeumContent() {
                 запуск telegram-канала и привлечение целевой аудитории
               </h3>
             </ScrollAnimation>
-            <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-кодкибер арен колизеум, а вообще </p>
+            <p>Colizeum общался со своими пользователями через сообщество в VK с момента основания. Мы разработали и запустили Telegram канал бренда, создав устойчивую альтернативу основной площадке.</p>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div className={cls.statsTelegram}>
                 <div className={cls.cardsBlock}>
@@ -80,10 +80,10 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
               <h3>
                 <span>3.</span>
-                разработка reels контента и привлечение целевых показателей
+                разработка reels контента и привлечение целевых показателей  
               </h3>
             </ScrollAnimation>
-            <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>
+            <p>Внедрили новую рубрику Reels, в которой публиковали новостной контент, мемы и смешные ситуации из игр, а также информирующие видео на игровую тему.</p>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div className={cls.statsReels}>
                 <div className={cls.statsReels_card}>
@@ -126,10 +126,10 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
               <h3>
                 <span>4.</span>
-                разработка reels контента и привлечение целевых показателей
+                продюсирование специальных акций и разработка дополнительного контена
               </h3>
             </ScrollAnimation>
-            <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>
+            <p>Команда FORM помогает прорабатывать и реализовывать масштабные акции, которые часто устраивает Colizeum.</p>
             <div>
               <img className={cls.photoGroupLines} src="/images/colizeum-photos-group-2.png" />
               <img className={cls.photoGroup} src="/images/colizeum-photos-group-1.png" />
@@ -142,12 +142,12 @@ export default function PortfolioColizeumContent() {
                 разработка гибкого и модулированного прайс-листа для всех арен colizeum
               </h3>
             </ScrollAnimation>
-            <p>Мы тут рассказываем про то, что создали рубрикатор и из этого получился полноценный контент-план. Создали с нуля графическую подачу дл каждой рубрики учитывая дизайн-код кибер арен колизеум, а вообще</p>
+            <p>Старый прайс-лист не отвечал современным требованиям пользователей. Количество арен растет, конфигураций становится все больше. Мы разработали гибкий прайс-лист, адаптируемый под клуб любого размера, начиная от одной и заканчивая шестью зонами для игр.</p>
           </li>
         </ul>
       </section>
       <section>
-        <div className={cls.sliderVideoSection} style={{marginTop: -40}}>
+        <div className={cls.sliderVideoSection}>
           <ReactPlayer loop={true} playsinline={true} autoplay={true} muted={true} playing={true} width={'100%'} height={'100%'} url='/video/slider-video-3.mp4' />
         </div>
       </section>

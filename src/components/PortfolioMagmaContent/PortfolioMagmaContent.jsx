@@ -21,11 +21,6 @@ export default function PortfolioMagmaContent() {
             <img src="/images/magma-union-1.png" />
           </div>
           <div className={cls.union}>
-            {/* {window.screen.width <= 900 ? (
-              <img src="/images/magma-union-2-alt.png" />
-            ) : (
-              <img src="/images/magma-union-2.png" />
-            )} */}
             <Union2 className={cls.unionSVG} />
           </div>
           <div className={cls.union}>
@@ -36,7 +31,7 @@ export default function PortfolioMagmaContent() {
         <img className={cls.boardImage} src="/images/magma-board.jpg" />
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <span>
-          Magma Architecture – московское архитектурное бюро, ориентированное на изучение поэтического потенциала архитектуры и совершенство дизайна.
+        В основу логотипа Magma заложен образ римского акведука, выполняющий как практическую, так и эстетическую функцию. В аркадный ряд заложены прочность, качество и долговечность - основные принципы Magma Architecture.
         </span>
       </ScrollAnimation>
         <img className={cls.screenImage} src="/images/magma-screen-1.png" />
