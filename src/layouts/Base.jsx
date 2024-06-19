@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, ScrollRestoration } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { useEffect, useState } from "react";
 
@@ -23,27 +23,8 @@ export default function BaseLayout() {
 
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 90);
-
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 120);
-
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 160);
-
-    setTimeout(() => {
-      window.scrollTo(0, 0);
     }, 200);
 
-    setTimeout(() => {
-      window.scrollTo(0, -150);
-    }, 250);
-
-    setTimeout(() => {
-      window.scrollTo(0, -150);
-    }, 300);
 
     setTimeout(() => {
       window.scrollTo(0, -150);
@@ -53,18 +34,17 @@ export default function BaseLayout() {
       window.scrollTo(0, -150);
     }, 400);
     
-
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, -150);
+    }, 500);
 
     return () => setIsLoaded(false);
   }, [location]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    
+  useEffect(() => { 
     setTimeout(() => {
       window.scrollTo(0, -150);
-    }, 300);
+    }, 350);
   }, []);
 
   return (
@@ -73,6 +53,7 @@ export default function BaseLayout() {
       <main className={isLoaded ? "showing" : ""}>
         <Outlet />
       </main>
+      <ScrollRestoration preventScrollReset={false}/>
     </div>
   );
 }
