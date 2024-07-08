@@ -126,7 +126,7 @@ export default function PortfolioColizeumContent() {
             <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce={true}>
               <h3>
                 <span>4.</span>
-                продюсирование специальных акций и разработка дополнительного контена
+                продюсирование специальных акций и разработка дополнительного контента
               </h3>
             </ScrollAnimation>
             <p>Команда FORM помогает прорабатывать и реализовывать масштабные акции, которые часто устраивает Colizeum.</p>
