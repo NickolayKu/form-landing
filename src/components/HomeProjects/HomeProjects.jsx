@@ -7,7 +7,7 @@ export default function HomeProjects() {
     {
       image: 'project-topgun.png',
       title: 'topgun - сеть барбершопов',
-      tags: ['UX/UI', 'Разработка'],
+      tags: ['UX/UI'],
       link: '/topgun',
       soon: false,
     },
