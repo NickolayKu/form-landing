@@ -35,7 +35,7 @@ export default function PortfolioMagmaContent() {
         </span>
       </ScrollAnimation>
       <img className={cls.screenImage} src="/images/magma-screen-1.png" />
-      <img className={cls.photosGroupImage} src="/images/magma-photos-group-3.png" />
+      <img className={cls.photosGroupImage} style={{marginBottom: 25}} src="/images/magma-photos-group-3.png" />
       <img className={cls.screenImage} src="/images/magma-screen-2.png" />
       <img className={cls.screenImage} src="/images/magma-screen-3.png" />
       <img className={cls.screenImage} src="/images/magma-screen-4.png" />
